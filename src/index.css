@@ -1,0 +1,162 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 8%;
+
+    --card: 240 100% 99%;
+    --card-foreground: 240 10% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 8%;
+
+    --primary: 244 100% 69%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 20% 95%;
+    --secondary-foreground: 240 10% 20%;
+
+    --muted: 240 10% 96%;
+    --muted-foreground: 240 5% 46%;
+
+    --accent: 244 60% 95%;
+    --accent-foreground: 244 80% 50%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --coral: 0 100% 71%;
+    --coral-foreground: 0 0% 100%;
+
+    --vibe-yellow: 48 100% 62%;
+    --vibe-yellow-foreground: 48 80% 15%;
+
+    --border: 240 10% 90%;
+    --input: 240 10% 90%;
+    --ring: 244 100% 69%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 244 100% 69%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 244 100% 69%;
+
+    /* Tool tag colors */
+    --tool-cursor: 216 100% 50%;
+    --tool-claude: 16 100% 60%;
+    --tool-bolt: 43 100% 50%;
+    --tool-v0: 0 0% 0%;
+    --tool-gpt: 160 82% 35%;
+    --tool-replit: 24 93% 48%;
+    --tool-other: 0 0% 53%;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 25% 13%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 25% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 244 100% 69%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 15% 18%;
+    --secondary-foreground: 0 0% 90%;
+
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 244 40% 20%;
+    --accent-foreground: 244 100% 80%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --coral: 0 100% 71%;
+    --coral-foreground: 0 0% 100%;
+
+    --vibe-yellow: 48 100% 62%;
+    --vibe-yellow-foreground: 48 80% 15%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 244 100% 69%;
+
+    --sidebar-background: 240 10% 8%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 244 100% 69%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 244 100% 69%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'Geist Mono', 'SF Mono', 'Fira Code', monospace;
+  }
+}
+
+@layer utilities {
+  .gradient-brand {
+    background: linear-gradient(135deg, hsl(244 100% 69%), hsl(280 80% 60%));
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(244 100% 69% / 0.15), hsl(0 100% 71% / 0.08), hsl(48 100% 62% / 0.05));
+  }
+
+  .gradient-coral {
+    background: linear-gradient(135deg, hsl(0 100% 71%), hsl(16 100% 60%));
+  }
+
+  .text-gradient-brand {
+    background: linear-gradient(135deg, hsl(244 100% 69%), hsl(280 80% 60%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
